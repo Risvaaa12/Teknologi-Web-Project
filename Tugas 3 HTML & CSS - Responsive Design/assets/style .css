@@ -1,0 +1,458 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Monserrat', sans-serif ;
+    background-color: rgba(255, 255, 255, 0.774);
+    overflow-y: hidden ;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Navbar section */
+section{
+    width: 100%;
+    height: 100vh;
+}
+
+section nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    right: 0;
+    left: 0;
+    height:65px;
+    padding: 10px;
+    background-color: #fac031;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+
+section nav .logo {
+    display: flex;
+    height: 55px;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: -150px;
+}
+
+
+section nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin-right: -200px;
+}
+
+section nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: 0.2s;
+}
+
+section nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #fac031;
+    display: block;
+    transition: 0.2s linear;
+}
+
+section nav ul li a:hover::after{
+    width: 100%;
+}
+
+nav ul li a:hover{
+    color: #fff;
+}
+
+/* End Nav Section */
+
+/* Logo atas Search Bar */
+
+
+section .main .main-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30vh;
+}
+
+#logo3{
+    height: 100px;
+}
+
+/* End logo atas search bar */
+
+
+
+/* Search Bar */
+section .main .search-box{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: -8vh ;
+}
+
+
+form{
+    background: #fff;
+    height: 35px;
+    display: flex;
+}
+
+form input{
+    width: 400px;
+    border-radius: 10px;
+}
+
+form button{
+    background:#fac031 ;
+    padding: 5px 10px;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+/* End search Bar */
+
+/* Fyp Content */
+.fyp{
+    width: 100%;
+    height: 100vh;
+    padding: 10px 0;
+}
+
+.fyp h1{
+    font-size:15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.fyp .fyp-box{
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.fyp .fyp-box .fyp-card{
+    width: 200px;
+    height: 230px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    padding: 6px 9px;
+    margin: 0 8px;
+    background: linear-gradient(#fafafa, #fac031 );
+    cursor: pointer;
+}
+
+.fyp .fyp-box .fyp-card .fyp-food{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.fyp .fyp-box .fyp-card .fyp-food img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+#burger{
+    height: 190px;
+}
+
+#hotdog{
+    height: 190px;
+}
+
+#pasta{
+    height: 190px;
+}
+
+#sandwich{
+    height: 190px;
+}
+
+#lasagna{
+    height: 190px;
+}
+/* End Fyp Content */
+
+
+/* Footer */
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -21vh;
+}
+footer .main-footer{
+    background-color: #fac031;
+}
+
+footer .logo-footer{
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#logo4{
+    height: 40px;
+}
+
+footer .tag-footer {
+    text-align: center;
+    padding: 30px;
+}
+
+footer .link-footer ul{
+    display: flex;
+    justify-content: space-evenly;
+    text-decoration: underline;
+    padding-bottom: 10px;
+}
+
+footer .link-footer ul li a{
+    color: black;
+}
+
+footer .link-footer ul li a:hover{
+    color: #fafafa;
+}
+
+/* End Footer */
+
+
+
+
+/* Resoponsive */
+@media screen and (max-width: 768px ) {
+
+    section nav .logo{
+        margin-left: 0;
+    }
+    
+    section nav ul{
+        position: absolute;
+        top: 9vh;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-right: 0;
+    }
+
+    section .main .search-box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 0;
+    }
+
+    section .main .main-logo{
+        display:flex;
+        opacity: 0.1;       
+    }
+
+
+    form{
+        height: 30px;
+        display: flex;
+        justify-items: flex-end;
+    }
+
+    form button{
+        height: 30px;
+        letter-spacing: 0px;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    section nav ul li a:hover::after{
+        width: 100%;
+    }
+    
+    nav ul li a:hover{
+        color: #fac031;
+    }
+
+
+    .fyp .fyp-box{
+        display: flex; 
+        flex-wrap: wrap;
+        margin: 10px auto;
+    }
+
+    .fyp .fyp-box .fyp-card{
+        width: 180px;
+        height: 200px;
+        margin: 1%;
+    }
+
+    #burger{
+        height: 150px;
+    }
+    
+    #hotdog{
+        height: 150px;
+    }
+    
+    #pasta{
+        height: 150px;
+    }
+    
+    #sandwich{
+        height: 150px;
+    }
+
+    #lasagna{
+        height: 150px;
+    }
+
+    footer{
+        margin-top: -14vh;
+    }
+    footer .tag-footer {
+        font-size: 14px;
+        text-align: center;
+        padding: 10px;
+    }  
+    
+    footer .link-footer ul li a{
+        font-size: 12px;
+    }
+
+
+
+}
+
+
+@media  screen and (max-width: 412px ) {
+    section nav{
+        height: 40px;
+    }
+
+    section nav .logo{
+        height: 30px;
+    }
+
+    section nav ul li{
+        margin-top: -6vh;
+    }
+
+    section nav ul li a{
+        font-size: 10px;
+    }
+
+    section .main .main-logo{
+        display: none;
+    }
+
+    section .main .search-box{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 40vh;
+    }   
+    
+    form{
+        background: #fff;
+        height: 25px;
+        display: flex;
+    }
+    
+    form input{
+        width: 235px;
+        border-radius: 10px;
+    }
+    
+    form button{
+        background:#fac031 ;
+        height: 25px;
+        border-radius: 10px;
+        letter-spacing: 0px;
+        cursor: pointer;
+        font-size: 10px;
+    }
+
+    .fyp{
+        width: 100%;
+        padding: 0;
+        margin-top: -15vh;
+    }
+
+    
+    .fyp .fyp-box{
+        display: flex; 
+        flex-wrap: wrap;
+        margin: 5px auto;
+    }
+
+    .fyp h1{
+        font-size: 9px;
+        padding:2px;
+    }
+
+    .fyp .fyp-box .fyp-card{
+        width: 95px;
+        height: 115px;
+        padding: 2px 3px;
+        margin: 0 8px;
+        margin: 1%;
+    }
+
+    #burger{
+        height: 100px;
+    }
+    
+    #hotdog{
+        height: 100px;
+    }
+    
+    #pasta{
+        height: 100px;
+    }
+    
+    #sandwich{
+        height: 100px;
+    }
+    #lasagna{
+        height: 100px;
+    }
+
+
+    footer{
+        margin-top: -10vh;
+    }
+
+    #logo4{
+        height: 20px;
+    }
+    
+    footer .tag-footer {
+        font-size:9px;
+        text-align: center;
+        padding: 5px;
+    }  
+    
+    footer .link-footer ul li a{
+        font-size: 9px;
+    }
+    
+}
