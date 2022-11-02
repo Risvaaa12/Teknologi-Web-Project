@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind cdn lb-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- jquery cdn lib -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="Stylesheet" type="text/css" />
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Jquery || Operasi Math</title>
+</head>
+<body>
+    <!-- Header -->
+    <section class="relative mx-auto">
+        <!-- navbar -->
+        <nav class="flex fixed justify-between py-1 bg-yellow-400 w-full text-black shadow-md z-20">
+        <div class="flex items-center w-full py-2 px-7 lg:px-12 lg:py-4">
+            <div class="flex mx-10">
+                <a href="index .html">
+                    <h1 class="font-bold font-mono">Logo</h1>
+                </a>
+            </div>
+            <!-- Nav Links -->
+            <ul class="hidden px-4 mx-auto ml-10 space-x-20 lg:flex font-heading ">
+                <li><a class="hover:text-gray-200" href="index .html">Home</a></li>
+                <li><a class="hover:text-gray-200" href="#">About Us</a></li>
+                <li><a class="hover:text-gray-200" href="#">Contact</a></li>
+                <li><a class="hover:text-gray-200" href="#">FAQ's</a></li>
+            </ul>
+
+
+            <!-- Header Icons -->
+            <div class="items-center hidden mr-16 space-x-8 lg:flex">
+                <a class="flex items-center hover:text-gray-200" href="#">
+                    <h4 class="px-2">Sign In</h4>
+                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                </a> 
+                <a class="flex items-center text-white bg-teal-600 rounded-lg hover:text-gray-200" href="#">
+                    <h4 class="px-4">Sign Up</h4>
+                    <i class="pr-4 fa fa-user-circle" aria-hidden="true"></i>  
+                </a>      
+            </div>
+        </div>
+
+        <!-- Responsive -->
+            <div class="fixed relative group z-100 lg:hidden">
+                <div class="flex items-center group-hover:border-grey-light">
+                    <a class="self-center py-2 mr-10 navbar-burger hover:text-gray-100 xl:hidden" id="nav-toggle" href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+                <div class="absolute z-50 flex flex-col items-center invisible bg-white bg-cover border rounded-md w-36 right-12 group-hover:visible">
+                    <ul class="flex flex-col pb-2 pt-">
+                        <li class="py-1"><a class="hover:text-gray-200" href="index .html">Home</a></li>
+                        <li class="py-1"><a class="hover:text-gray-200" href="#">About</a></li>
+                        <li class="py-1"><a class="hover:text-gray-200" href="#">Contact</a></li>
+                        <li class="py-1"><a class="hover:text-gray-200" href="#">FAQ's</a></li>
+                    </ul>
+                    <hr class="w-full border border-t-dark-400">
+                    <div class="flex flex-col py-2">
+                        <a class="flex items-center py-1 hover:text-gray-200" href="#">
+                            <h4 >Sign In</h4>
+                            <i class="px-2 fa fa-sign-in" aria-hidden="true"></i>
+                        </a> 
+                        <a class="flex items-center py-1 hover:text-gray-200" href="#">
+                            <h4 ">Sign Up</h4>
+                            <i class="px-2 fa fa-user-circle" aria-hidden="true"></i>  
+                        </a>      
+                    </div>
+                </div>
+            </div>        
+        </nav> 
+        <!-- Nav end -->
+
+        <hr class="w-full border drop-shadow-lg">    
+
+        <!-- Search Bar -->
+        <!-- <div class=" flex flex-col mt-12 items-center justify-center pt-6 lg:pt-16 lg:w-full"> 
+            <div class="flex py-6 justify-between lg:w-5/12">
+                <form class="w-full ">
+                    <input class="w-full px-6 py-1  rounded-l-lg border border-yellow-400 " type="text" placeholder="Cari Kost Disini ...">    
+                </form>
+                <button type="submit"><i class="px-6 py-2 border rounded-r-lg bg-yellow-400 border-yellow-400 fa fa-search" aria-hidden="true"></i></button>                   
+            </div>
+            
+        </div>   -->
+    </section>
+    <!-- Header End -->
+
+    <!-- Content -->
+    <section class=" py-12 mt-10 flex items-center justify-center">
+        <div class="flex-col py-12  bg-yellow-400  rounded-lg">
+            <p class="text-center font-bold">
+                Validasi Form Dengan Jquery
+            </p>    
+            <div class="container items-center justify-center w-full">
+                <div class="flex items-center justify-center py-4">
+                    <form action=" formulir.php" method="post" name="Form">
+                        <div class="form-group">
+                            <label for="user">
+                                Nama :
+                            </label>
+                            <input type="text" name="Nama" id="Namas" class="form-control border">
+                            <h5 id="usercheck" style="color: red;">
+                                **Nama harus diisi
+                            </h5>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Nim">
+                                Nim :
+                            </label>
+                            <input type="Nim" name="Nim" id="Nims" class="form-control border">
+                            <h5 id="nimCheck" style="color: red;">
+                                **Nim harus diisi
+                            </h5>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="user">
+                                Email :
+                            </label>
+                            <input type="email" name="email" id="email" required class="form-control border">
+                            <small id="emailvalid" class="form-text
+                            text-muted invalid-feedback">
+                            </small>
+                        </div> 
+                        <div class="form-date">
+                            <label for="date">
+                                Tanggal Lahir :
+                            </label>
+                            <input type="text" id="txtDate" name="SelectedDate" class="form-control border" />
+                            <span id="lblError" style = "color:Red"></span>
+                            </small>
+                        </div>   
+                    </form>
+                </div>
+            </div>
+            <form action=" formulir.php" method="post" onSubmit="" name="FormReg">
+            <div class="flex-col py-12  bg-yellow-400  rounded-lg px-6">
+                <p class="text-center font-bold">
+                    Perhitungan Volume
+                </p>    
+                <div class="container items-center justify-center w-full">
+                    <div class="flex items-center justify-center py-2">
+                        <table>
+                            <td>Pilih Bangun Ruang</td>
+                            <td>:</td>
+                        <td>
+                            <input type="radio" name="bangun" value="Balok" onclick="Balok()" checked /> Balok
+                            <input type="radio" name="bangun" value="Kubus" onclick="Kubus()" /> Kubus
+                            <input type="radio" name="bangun" value="Bola" onclick="Bola()" /> Bola
+                        </tr>
+                        <!-- <tr>
+                            <td>Volume</td>
+                            <td>:</td>
+                            <td id="nama_bangun">Balok</td>
+                        </tr> -->
+                        <tr>
+                            <td colspan="3">
+                                <hr/> </td>
+                        </tr>
+                        <tr>
+                            <td id="par1">Panjang</td>
+                            <td>:</td>
+                            <td><input type="number" name="par1" value="" onkeyup="hitung()" class="rounded-lg w-full" placeholder="Hanya Angka" /></td>
+                        </tr>
+                        <tr>
+                            <td id="par2">Lebar</td>
+                            <td>:</td>
+                            <td><input type="number" name="par2" value="" onkeyup="hitung()" class="rounded-lg w-full" placeholder="Hanya Angka" /></td>
+                        </tr>
+                        <tr>
+                            <td id="par3">Tinggi</td>
+                            <td>:</td>
+                            <td><input type="number" name="par3" value="" onkeyup="hitung()" class="rounded-lg w-full" placeholder="Hanya Angka" /></td>
+                        </tr>
+                        <tr>
+                            <td>Volume</td>
+                            <td>:</td>
+                            <td><input type="number" name="hasil"  value="" class="rounded-lg w-full" readonly /><br/>
+                                <small style="color: red" id="err_hasil"></small></td>
+                        </tr>
+                        </table>                           
+                    </div>
+                </div>
+            </div>  
+        </form>       
+        </div>   
+    </section>  
+    <!-- End Content -->
+
+    <!-- script -->
+    <script type="text/javascript">  
+        // Validate Username
+        $("#usercheck").hide();
+        let usernameError = true;
+        $("#Namas").keyup(function () {
+            validateUsername();
+        });
+        function validateUsername() {
+            let usernameValue = $("#Namas").val();
+            if (usernameValue.length == "") {
+            $("#usercheck").show();
+            usernameError = false;
+            return false;
+            } else if (usernameValue.length < 3 || usernameValue.length > 25) {
+            $("#usercheck").show();
+            $("#usercheck").html("**Panjang Nama minimal 3 dan maksimal 25");
+            usernameError = false;
+            return false;
+            } else {
+            $("#usercheck").hide();
+            }
+        }
+
+        // Validate Nim
+        $("#nimCheck").hide();
+        let passwordError = true;
+        $("#Nims").keyup(function () {
+            validateNims();
+        });
+        function validateNims() {
+            let NimsValue = $("#Nims").val();
+            if (NimsValue.length == "") {
+            $("#nimCheck").show();
+            NimsError = false;
+            return false;
+            }
+            if (NimsValue.length < 10) {
+            $("#nimCheck").show();
+            $("#nimCheck").html(
+                "**Panjang Nim harus 10"
+            );
+            $("#nimCheck").css("color", "red");
+            NimsError = false;
+            return false;
+            } else {
+            $("#nimCheck").hide();
+            }
+        }
+
+        // Validate Email
+        const email = document.getElementById("email");
+        email.addEventListener("blur", () => {
+            let regex = /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
+            let s = email.value;
+            if (regex.test(s)) {
+            email.classList.remove("is-invalid");
+            emailError = true;
+            } else {
+            email.classList.add("is-invalid");
+            emailError = false;
+            }
+        });
+
+        // Validate DOB
+        $(function () {
+            $("#txtDate").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                showOn: 'button',
+                buttonImageOnly: true,
+                buttonImage: 'img/calendar.png',
+                dateFormat: 'dd/mm/yy',
+                yearRange: '1900:+0',
+                onSelect: function (dateString, txtDate) {
+                    ValidateDOB(dateString);
+                }
+            });
+        });
+    
+        function ValidateDOB(dateString) {
+            var lblError = $("#lblError");
+            var parts = dateString.split("/");
+            var dtDOB = new Date(parts[1] + "/" + parts[0] + "/" + parts[2]);
+            var dtCurrent = new Date();
+            lblError.html("Kamu belum berumur 18 !")
+            if (dtCurrent.getFullYear() - dtDOB.getFullYear() < 18) {
+                return false;
+            }
+            if (dtCurrent.getFullYear() - dtDOB.getFullYear() == 18) {
+                //CD: 11/06/2018 and DB: 15/07/2000. Will turned 18 on 15/07/2018.
+                if (dtCurrent.getMonth() < dtDOB.getMonth()) {
+                    return false;
+                }
+                if (dtCurrent.getMonth() == dtDOB.getMonth()) {
+                    //CD: 11/06/2018 and DB: 15/06/2000. Will turned 18 on 15/06/2018.
+                    if (dtCurrent.getDate() < dtDOB.getDate()) {
+                        return false;
+                    }
+                }
+            }
+            lblError.html("");
+            return true;
+        }
+
+        // Menghitung volume
+        function Balok() {
+            $("#nama_bangun").innerHTML = "Balok";
+            $("#par1").innerHTML = "Panjang";
+            $("#par2").innerHTML = "Lebar";
+            $("#par3").innerHTML = "Tinggi";
+            hitung();
+        }
+        function Kubus() {
+            $("#nama_bangun").innerHTML = "Kubus";
+            $("#par1").innerHTML = "Sisi";
+            hitung();
+        }
+        function Bola() {
+            $("#nama_bangun").innerHTML = "Bola";
+            $("#par1").innerHTML = "Jari Jari";
+            hitung();
+        }
+        function hitung() {
+            var hasil = 0;
+            var par1 = parseFloat(document.FormReg.par1.value);
+            var par2 = parseFloat(document.FormReg.par2.value);
+            var par3 = parseFloat(document.FormReg.par3.value);
+            switch (document.FormReg.bangun.value) {
+                case "Balok":
+                    hasil = (par1 * par2 * par3);
+                    break;
+                case "Kubus":
+                    hasil = (par1*par1*par1);
+                    break;
+                case "Bola":
+                    hasil = (4/3*22/7*(par1*par1*par1));
+                    break;
+            }
+            //menampilkan hasilnya pada text hasil menggunakan DOM
+            document.FormReg.hasil.value = hasil;
+        }
+    </script>
+
+</body>
+</html>
